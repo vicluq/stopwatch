@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="http://localhost:3030/css/index.css">
+    <title>stopwatch</title>
+</head>
+<body>
+    <div id="root">
+        <div class="Popup"></div>
+        <header id="AppHeader">
+            <h1><span>🕙</span>The Stopwatch</h1>
+        </header>
+        <div id="AppContent">
+            <div id="ContentBox">
+                <div id="TimeBox">
+                    <p id="Hours">
+                        <span class="digitBox hourBox">0</span>
+                        <span class="digitBox hourBox">0</span>
+                    </p>
+                    <p class="separators">:</p>
+                    <p id="Minutes">
+                        <span class="digitBox minBox">0</span>
+                        <span class="digitBox minBox">0</span>
+                    </p>
+                    <p class="separators">:</p>
+                    <p id="Seconds">
+                        <span class="digitBox secBox">0</span>
+                        <span class="digitBox secBox">0</span>
+                    </p>
+                </div>
+                <div id="LapsBox">
+                    <h3>Laps</h3>
+                    <div id="LapsBoxContent">
+                    </div>
+                </div>
+                <div id="ControlBox">
+                    <button id="StartStopButton" class="controlButton">Start</button>
+                    <button id="AddLapButton" class="controlButton">Add Lap</button>
+                    <button id="ResetButton" class="controlButton">Reset</button>
+                </div>
+            </div>
+        </div>
+        <footer id="AppFooter"></footer>
+    </div>
+    <script src="http://localhost:3030/scripts/index.js"></script>
+</body>
+</html>

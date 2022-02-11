@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    width: 100%;
+}
+
+#root {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-rows: 10% 87% 3%;
+    font-family: 'Roboto', sans-serif;
+}
+
+#AppHeader {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-color: #20cbe1;
+    color: #fff;
+    font-weight: 600;
+    border-bottom: 8px solid #508991;
+}
+
+#AppHeader h1 span {
+    margin-right: 6px;
+}
+
+#AppHeader .InfoButton {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    left: calc(100% - 40px); /* Posso definir no javascript tb */
+
+    background-color: #fff;
+    border: 1px solid #00000010;
+    border-radius: 100px;
+    box-shadow: 3px 4px 3px #0002;
+    cursor: pointer;
+    transition: box-shadow 0.25s linear;
+}
+
+#AppHeader .InfoButton:hover {
+    box-shadow: none;
+}
+
+.Popup {
+    width: 0;
+    height: 0;
+    display: none;
+}
+
+#AppContent {
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+}
+
+#ContentBox {
+    width: 100%;
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#TimeBox {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 5rem;
+}
+
+#Hours {
+    margin-right: 9px;
+}
+
+#Minutes {
+    margin-left: 9px;
+    margin-right: 9px;
+}
+
+#Seconds {
+    margin-left: 9px;
+}
+
+.digitBox {
+    background-color: #20cbe1;
+    padding: 0 10px 0 10px;
+    color: #fff;
+    border-radius: 10px;
+    border: 3px solid #508991;
+}
+
+#ControlBox {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.controlButton {
+    height: 50px;
+    width: 20%;
+    margin: 0 5px 0 5px;
+    cursor: pointer;
+    outline: none;
+    border: 1px solid #00000010;
+    font-size: large;
+    border-radius: 12px;
+    transition: border-radius 0.25s linear;
+}
+
+.controlButton:hover {
+    border-radius: 2px;
+    color: #fff;
+}
+
+.controlButton:disabled {
+    cursor: not-allowed;
+    border-radius: 12px;
+    color: #000;
+    opacity: 0.6;
+
+}
+
+#StartStopButton {
+    background-color:#a2ef49;
+}
+
+#StartStopButton.stop {
+    background-color:#ff794f;
+}
+
+#AddLapButton {
+    background-color: #ffb74d;
+}
+
+
+#LapsBox {
+    height: 100%;
+    width: 380px;
+    padding: 5px;
+    margin: 10px 0 10px 0;
+    border-top: 2px solid #20cbe1;
+    border-bottom: 2px solid #20cbe1;
+    overflow-y: auto;
+}
+
+#LapsBoxContent {
+    width: 100%;
+    padding: 5px 0 5px 10px;
+}
+
+.lapText {
+    padding: 2px;
+    background-color: #31c0d54d;
+    margin: 5px 0 5px 0;
+}
+
+@media (max-width: 660px) {
+    #TimeBox {
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 380px) {
+    #TimeBox {
+        font-size: 2rem;
+    }
+}
